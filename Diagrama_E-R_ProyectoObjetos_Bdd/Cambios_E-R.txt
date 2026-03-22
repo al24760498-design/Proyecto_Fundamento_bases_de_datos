@@ -1,0 +1,15 @@
+Reglas de normaliacion en diagrama E-R:
+
+Se usaron las 1FN, 2FN Y 3FN en todas las tablas
+
+
+Cambios Para la entidad objeto:
+se agregaron estos atributos a la entidad "Objeto"
+categoria_id(fk): Esta se agrego debido a que un objeto tambien debia tener una categoria y por ello se agrego esa relacion con la foreign key
+precio: Esto se agrego en relacion con la lista de deseos, ya que antes pertenecia solo a la entidad "lista de deseos" pero hacia incumplir la 2FN, por lo que la correccion fue hacer que de base ya pertenezca a objeto y asi no segmentarse individualmente desde lista de eseos
+Lista_de_deseos(fk): La lista de deseos contiene objetos y a su vez los atributos de los mismos, es por ello que se agrego esa correlacion mutua entre ambos
+
+Cambios para la emntidad Lista de deseos:
+se agregaron estos atributos a la entidad "Lista de deseos"
+Para lista de deseos:
+Objeto_id(fk): Un objeto puede pertenecer a la lista de deseos, pero tambien se requiere ese puente entre lista y objeto y por ello el objeto al estar dentro de la lista de deseos, ya manda los datos que contiene de base la entidad "objeto"
